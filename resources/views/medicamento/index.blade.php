@@ -1,16 +1,16 @@
 @extends('welcome')
 @section('content')
-
+<br><br>
+<h1 class="titulosbd">MEDICAMENTOS</h1>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create">
     Nuevo
   </button>
   
-<div class="table-responsive">
+<div class="table-responsive ">
     <br>
-    <table
-        class="table"
-    >
-        <thead class="bg-dark text-white">
+    
+    <table class="table border-primary  ">
+        <thead class="table-dark text-white">
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">NOMBRE</th>
@@ -39,11 +39,9 @@
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{$medicamento->id}}">
                             Eliminar
                           </button>
-                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#show{{$medicamento->id}}">
+                          <button type="button" class="btn" style="background-color: orange; color: white;" data-bs-toggle="modal" data-bs-target="#show{{$medicamento->id}}">
                             Mostrar
-                          </button>
-                          
-                          
+                        </button>  
                     </td>
                 </tr>
                 @include('medicamento.info') 

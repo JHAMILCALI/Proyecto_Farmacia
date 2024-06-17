@@ -1,6 +1,7 @@
 @extends('welcome')
 @section('content')
-
+<br><br>
+<h1 class="titulosbd">PROVEDORES</h1>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create">
     Nuevo
   </button>
@@ -8,9 +9,9 @@
 <div class="table-responsive">
     <br>
     <table
-        class="table"
+        class="table table-bordered border-primary" 
     >
-        <thead class="bg-dark text-white">
+        <thead class="table-dark text-white">
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">NOMBRE</th>
@@ -33,9 +34,9 @@
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{$proveedor->id}}">
                             Eliminar
                           </button>
-                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#show{{$proveedor->id}}">
+                          <button type="button" class="btn" style="background-color: orange; color: white;" data-bs-toggle="modal" data-bs-target="#show{{$proveedor->id}}">
                             Mostrar
-                          </button>
+                        </button>
                           
                     </td>
                 </tr>
